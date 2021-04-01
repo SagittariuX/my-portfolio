@@ -1,11 +1,9 @@
 import { Container } from "react-bootstrap";
 import "./App.css";
 import MyNav from "./component/MyNav";
-
-const id = process.env.REACT_APP_EMAIL_USER_ID;
+import ContactForm from "./component/ContactForm";
 
 function App() {
-  console.log(id);
   return (
     <>
       <MyNav />
@@ -19,7 +17,7 @@ function App() {
           pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
           culpa qui officia deserunt mollit anim id est laborum.
         </div>
-        <div>{id}</div>
+        <ContactForm />
       </Container>
     </>
   );
