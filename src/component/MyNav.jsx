@@ -8,11 +8,10 @@ import myLogo from "../assets/pics/logo.png";
 import MenuIcon from "@material-ui/icons/Menu";
 import CloseIcon from "@material-ui/icons/Close";
 
-const MyNav = () => {
+const MyNav = ({isMenuOpen, setMenuOpen}) => {
   const [isSticky, setSticky] = useState(false);
   const [isHidden, setHidden] = useState(false);
   const [isSmallScreen, setSmallScreen] = useState(window.innerWidth <= 768);
-  const [isMenuOpen, setMenuOpen] = useState(false);
   const lastYOffSet = useRef(0);
 
   useEffect(() => {
@@ -40,7 +39,7 @@ const MyNav = () => {
         isHidden && styles["hide"]
       }`}
     >
-      <Navbar.Brand>
+      <Navbar.Brand href='#'>
         <img src={myLogo} width="50" height="50" alt="myLogo" />
       </Navbar.Brand>
 
@@ -60,6 +59,7 @@ const MyNav = () => {
         }`}
       >
         <Nav.Link
+          href='#about-me'
           onClick={() => {
             setMenuOpen(false);
           }}

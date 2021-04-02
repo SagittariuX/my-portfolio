@@ -1,5 +1,6 @@
 :root {
   --my-bg-primary: #185690;
+  --my-bg-primary-transparent: #185690cc;
   --my-primary-accent: #203079;
   --my-primary-accent-transparent: #203079cc;
 
@@ -20,4 +21,9 @@ body {
   position: relative;
   overflow-x: hidden;
   overflow-y: auto;
+}
+
+#content-wrapper.blur{
+  filter: blur(4px);
+  pointer-events: none;
 }

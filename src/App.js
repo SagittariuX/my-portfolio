@@ -1,14 +1,21 @@
+import React, { useState } from "react";
 import { Container } from "react-bootstrap";
 import "./App.css";
 import MyNav from "./component/MyNav";
 import ContactForm from "./component/ContactForm";
 
 function App() {
+  const [isMenuOpen, setMenuOpen] = useState(false);
+
   return (
     <>
-      <MyNav />
-      <Container style={{ height: "3000px" }}>
-        <div>
+      <MyNav setMenuOpen={setMenuOpen} isMenuOpen={isMenuOpen} />
+      <Container
+        id="content-wrapper"
+        style={{ height: "3000px" }}
+        className={`${isMenuOpen ? "blur" : ""}`}
+      >
+        <div id="about-me">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
           eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
           minim veniam, quis nostrud exercitation ullamco laboris nisi ut

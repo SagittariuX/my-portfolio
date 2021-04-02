@@ -1,6 +1,6 @@
 
 .my-navbar{
-    background-color: var(--my-bg-primary);
+    background-color: var(--my-bg-primary-transparent);
     z-index: 99;
     transition: all .5s;
     justify-content: space-around !important;
