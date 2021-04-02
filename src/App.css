@@ -10,9 +10,14 @@
   --font-title: "Montserrat", sans-serif;
 }
 
+body {
+  color: var(--my-primary-text-color) !important;
+  background-color: var(--my-bg-primary) !important;
+  font-family: var(--font-text);
+}
 
-body{
-    color: var(--my-primary-text-color) !important;
-    background-color: var(--my-bg-primary) !important;
-    font-family: var(--font-text);
+#root {
+  position: relative;
+  overflow-x: hidden;
+  overflow-y: auto;
 }
