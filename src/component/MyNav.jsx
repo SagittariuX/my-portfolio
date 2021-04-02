@@ -35,6 +35,7 @@ const MyNav = () => {
 
   return (
     <Navbar
+      onBlur={() => setMenuOpen(false)}
       className={`${styles["my-navbar"]} ${isSticky && styles["sticky"]} ${
         isHidden && styles["hide"]
       }`}
@@ -73,6 +74,7 @@ const MyNav = () => {
           Projects
         </Nav.Link>
         <Nav.Link
+          href="#contact-me"
           onClick={() => {
             setMenuOpen(false);
           }}

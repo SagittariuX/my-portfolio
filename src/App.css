@@ -1,0 +1,18 @@
+:root {
+  --my-bg-primary: #185690;
+  --my-primary-accent: #203079;
+  --my-primary-accent-transparent: #203079cc;
+
+  --my-primary-highlight: #00ccff;
+  --my-primary-text-color: #9baaf0;
+  --my-primary-title-color: #00ccff;
+  --font-text: "Roboto", "Calibri", Arial, sans-serif;
+  --font-title: "Montserrat", sans-serif;
+}
+
+
+body{
+    color: var(--my-primary-text-color) !important;
+    background-color: var(--my-bg-primary) !important;
+    font-family: var(--font-text);
+}

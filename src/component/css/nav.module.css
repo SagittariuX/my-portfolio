@@ -1,18 +1,31 @@
 
 .my-navbar{
-    background-color: red;
+    background-color: var(--my-bg-primary);
     z-index: 99;
     transition: all .5s;
     justify-content: space-around !important;
-    /* overflow: hidden; */
 }
+
 .sticky{
     position: sticky !important;
     top: 0;
 }
 
+.my-navbar.sticky{
+    background-color: var(--my-primary-accent-transparent);
+    backdrop-filter: blur(4px);
+}
+
 .my-navbar.sticky.hide{
     transform: translateY(-100%);
+}
+
+.my-nav-links > a{
+    color: var(--my-primary-text-color) !important;
+}
+
+.my-nav-links > a:hover{
+    color: var(--my-primary-highlight) !important
 }
 
 @media screen and (max-width: 768px){
@@ -22,13 +35,16 @@
         left:100%;
         width: 50%;
         height: 100vh;
-        background-color: red;
-        z-index: 99;
+        background-color: inherit;
+        z-index: 98;
+        visibility: hidden;
         flex-direction: column !important;
-        transition: all .5s;
-        /* transform: translateX(-100%); */
+        /* box-shadow: -5px 0px 5px #00000080; */
+        transition-property: transform, visibility;
+        transition-duration: .5s;
     }
     .my-nav-links.toggle{
+        visibility: visible;
         transform: translateX(-100%);
     }
 
