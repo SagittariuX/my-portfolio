@@ -22,7 +22,7 @@ const ContactForm = () => {
   };
 
   return (
-    <Container id='contact-me' className={styles["my-form-container"]}>
+    <Container fluid id='contact-me' className={styles["my-form-container"]}>
       <Form className={styles["my-form"]} onSubmit={handleSubmit}>
         <Row className={styles["my-form-row"]}>
           <Form.Control

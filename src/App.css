@@ -7,14 +7,14 @@
   --my-primary-highlight: #00ccff;
   --my-primary-text-color: #9baaf0;
   --my-primary-title-color: #00ccff;
-  --font-text: "Roboto", "Calibri", Arial, sans-serif;
-  --font-title: "Montserrat", sans-serif;
+  --font-title: 'Space Mono', Monaco , monospace;
+  --font-text: "Montserrat", sans-serif;
 }
 
 body {
   color: var(--my-primary-text-color) !important;
   background-color: var(--my-bg-primary) !important;
-  font-family: var(--font-text);
+  font-family: var(--font-text)  !important;
 }
 
 #root {
