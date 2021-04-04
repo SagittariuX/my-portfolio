@@ -28,9 +28,37 @@
 .my-project-img{
     height: 300px;
     border-radius: 20px;
+    filter: grayscale(50%);
     cursor: pointer;
 }
 
 .my-project-img:hover{
     box-shadow: 0 0 10px black;
+    filter: grayscale(0%);
+}
+
+
+.my-modal-header{
+    border: none !important;
+}
+
+.my-modal-container{
+    display: flex;
+    align-items: center;
+}
+
+.my-modal-container > div{
+    flex: 1;
+    padding: 10px;
+}
+
+.my-modal-img{
+    width: 100%;
+    border-radius: 20px;
+}
+
+@media screen and (max-width: 1000px){
+    .my-modal-container{
+        flex-direction: column;
+    }
 }
