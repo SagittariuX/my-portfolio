@@ -8,7 +8,7 @@ import myLogo from "../assets/pics/logo.png";
 import MenuIcon from "@material-ui/icons/Menu";
 import CloseIcon from "@material-ui/icons/Close";
 
-const MyNav = ({isMenuOpen, setMenuOpen}) => {
+const MyNav = ({ isMenuOpen, setMenuOpen }) => {
   const [isSticky, setSticky] = useState(false);
   const [isHidden, setHidden] = useState(false);
   const [isSmallScreen, setSmallScreen] = useState(window.innerWidth <= 768);
@@ -39,7 +39,7 @@ const MyNav = ({isMenuOpen, setMenuOpen}) => {
         isHidden && styles["hide"]
       }`}
     >
-      <Navbar.Brand href='#'>
+      <Navbar.Brand href="#">
         <img src={myLogo} width="50" height="50" alt="myLogo" />
       </Navbar.Brand>
 
@@ -59,7 +59,7 @@ const MyNav = ({isMenuOpen, setMenuOpen}) => {
         }`}
       >
         <Nav.Link
-          href='#about-me'
+          href="#about-me"
           onClick={() => {
             setMenuOpen(false);
           }}
@@ -81,6 +81,11 @@ const MyNav = ({isMenuOpen, setMenuOpen}) => {
         >
           Contact Me
         </Nav.Link>
+        <Nav.Link
+          target='_blank'
+          href={process.env.PUBLIC_URL + "/resume/resume.pdf"}
+          onClick={() => setMenuOpen(false)}
+        >Résumé</Nav.Link>
       </Nav>
     </Navbar>
   );
