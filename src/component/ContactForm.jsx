@@ -24,7 +24,7 @@ const ContactForm = () => {
   return (
     <>
       <h1 >Connect with Me</h1>
-      <Container fluid id="contact-me" className={styles["my-form-container"]}>
+      <Container id="contact-me" className={styles["my-form-container"]}>
         <Form className={styles["my-form"]} onSubmit={handleSubmit}>
           <Row className={styles["my-form-row"]}>
             <Form.Control

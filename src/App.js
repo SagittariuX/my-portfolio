@@ -14,7 +14,11 @@ function App() {
   return (
     <>
       <MyNav setMenuOpen={setMenuOpen} isMenuOpen={isMenuOpen} />
-      <Container id="content-wrapper" className={`${isMenuOpen ? "blur" : ""}`}>
+      <Container
+        fluid
+        id="content-wrapper"
+        className={`${isMenuOpen ? "blur" : ""}`}
+      >
         <AboutMe />
         <Projects />
         <ContactForm />

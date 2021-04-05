@@ -1,14 +1,10 @@
 
 .my-navbar{
-    background-color: var(--my-bg-primary-transparent);
     z-index: 99;
     transition: all .5s;
     justify-content: space-around !important;
     font-family: var(--font-title);
     font-size: 14px;
-}
-
-.sticky{
     position: fixed !important;
     width: 100%;
     top: 0;

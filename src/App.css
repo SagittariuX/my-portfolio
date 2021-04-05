@@ -6,6 +6,7 @@
 
   --my-primary-highlight: #00ccff;
   --my-primary-text-color: #bdc6ee;
+  --my-primary-text-color-dark:#203079;
   --my-primary-title-color: #00ccff;
   --font-title: 'Space Mono', Monaco , monospace;
   --font-text: "Montserrat", sans-serif;
@@ -21,6 +22,11 @@ body {
   position: relative;
   overflow-x: hidden;
   overflow-y: auto;
+}
+
+#content-wrapper{
+  padding-left: 0px;
+  padding-right: 0px;
 }
 
 #content-wrapper.blur{

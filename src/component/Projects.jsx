@@ -14,17 +14,27 @@ const ProjectCard = ({
 
   return (
     <>
-      <h2>{title}</h2>
-      <div>
+      <div
+        className={styles["my-project-img-wrapper"]}
+        onClick={() => setModal(true)}
+      >
+        <div className={styles["my-project-img-overlay"]}>
+          <span>{title}</span>
+        </div>
         <img
           className={styles["my-project-img"]}
           alt={title}
           src={process.env.PUBLIC_URL + pic}
-          onClick={() => setModal(true)}
         />
       </div>
 
-      <Modal centered contentClassName={styles['my-modal']} show={showModal} onHide={() => setModal(false)} size="xl">
+      <Modal
+        centered
+        contentClassName={styles["my-modal"]}
+        show={showModal}
+        onHide={() => setModal(false)}
+        size="xl"
+      >
         <Modal.Header closeButton className={styles["my-modal-header"]}>
           {title}
         </Modal.Header>
@@ -40,7 +50,9 @@ const ProjectCard = ({
             <div>{description}</div>
           </Container>
         </Modal.Body>
-        <Modal.Footer className={styles['my-modal-footer']}>Footer</Modal.Footer>
+        <Modal.Footer className={styles["my-modal-footer"]}>
+          Footer
+        </Modal.Footer>
       </Modal>
     </>
   );
@@ -54,23 +66,27 @@ const Projects = () => {
 
   return (
     <>
-    <Container fluid id='projects' className={styles["my-project-container"]}>
-    <h1>Some Of My Projects</h1>
-      <Row className={styles["my-project-wrapper"]}>
-        <Col className={styles["my-project-innerwrapper"]}>
-          <ProjectCard json={project0} />
-        </Col>
-        <Col className={styles["my-project-innerwrapper"]}>
-          <ProjectCard json={project1} />
-        </Col>
-      </Row>
-      <Row className={styles["my-project-wrapper"]}>
-        <Col className={styles["my-project-innerwrapper"]}>
-          <ProjectCard json={project2} />
-        </Col>
-        <Col className={styles["my-project-innerwrapper"]}><ProjectCard json={project3} /></Col>
-      </Row>
-    </Container>
+      <Container fluid id={styles["my-project-bg"]}>
+        <Container id="projects" className={styles["my-project-container"]}>
+          <h1>Some Of My Projects</h1>
+          <Row className={styles["my-project-wrapper"]}>
+            <Col className={styles["my-project-innerwrapper"]}>
+              <ProjectCard json={project0} />
+            </Col>
+            <Col className={styles["my-project-innerwrapper"]}>
+              <ProjectCard json={project1} />
+            </Col>
+          </Row>
+          <Row className={styles["my-project-wrapper"]}>
+            <Col className={styles["my-project-innerwrapper"]}>
+              <ProjectCard json={project2} />
+            </Col>
+            <Col className={styles["my-project-innerwrapper"]}>
+              <ProjectCard json={project3} />
+            </Col>
+          </Row>
+        </Container>
+      </Container>
     </>
   );
 };
