@@ -1,0 +1,45 @@
+#contact-me-bg {
+  padding: 10vh 0;
+  background: rgb(64, 138, 152);
+  background: -moz-linear-gradient(
+    180deg,
+    rgba(64, 138, 152, 1) 0%,
+    rgba(96, 209, 158, 1) 100%
+  );
+  background: -webkit-linear-gradient(
+    180deg,
+    rgba(64, 138, 152, 1) 0%,
+    rgba(96, 209, 158, 1) 100%
+  );
+  background: linear-gradient(
+    180deg,
+    rgba(64, 138, 152, 1) 0%,
+    rgba(96, 209, 158, 1) 100%
+  );
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#408a98",endColorstr="#60d19e",GradientType=1);
+}
+
+.my-form-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* color: var(--my-primary-text-color-dark); */
+}
+
+.my-form {
+  width: 50%;
+}
+
+.my-form-row {
+  display: flex;
+  width: 100%;
+  margin: 10px auto 0 auto !important;
+
+  justify-content: space-around;
+}
+
+@media screen and (max-width: 768px) {
+  .my-form {
+    width: 90%;
+  }
+}
