@@ -1,0 +1,16 @@
+{
+    "items": [
+        {
+            "icon" : "linkedin",
+            "href" : "https://www.linkedin.com/in/aaron-m-an/"
+        },
+        {
+            "icon" : "github",
+            "href" : "https://github.com/SagittariuX"
+        },
+        {
+            "icon" : "mail",
+            "href" : "mailto:aaronan1996@gmail.com"
+        }
+    ]
+}
