@@ -9,7 +9,7 @@ const SocialInfo = () => {
     <div className={styles["my-social-info"]}>
       {socialjson.items.map(({ icon, href }, i) => {
         return (
-          <a href={href} key={i} className={styles['my-link']}>
+          <a href={href} rel='noreferrer' target='_blank' key={i} className={styles['my-link']}>
             <FeatherIcon icon={icon} />
           </a>
         );

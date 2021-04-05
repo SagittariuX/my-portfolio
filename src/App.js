@@ -3,10 +3,9 @@ import { Container } from "react-bootstrap";
 import "./App.css";
 
 import MyNav from "./component/MyNav";
-import ContactForm from "./component/ContactForm";
+import ContactMe from "./component/ContactMe";
 import AboutMe from "./component/AboutMe";
 import Projects from "./component/Projects";
-import SocialInfo from "./component/SocialInfo";
 
 function App() {
   const [isMenuOpen, setMenuOpen] = useState(false);
@@ -21,8 +20,7 @@ function App() {
       >
         <AboutMe />
         <Projects />
-        <ContactForm />
-        <SocialInfo />
+        <ContactMe />
       </Container>
     </>
   );

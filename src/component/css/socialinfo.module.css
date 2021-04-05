@@ -6,11 +6,10 @@
 
 .my-link{
     margin: 0px 15px;
-    color: var(--my-primary-text-color);
+    color: var(--my-primary-text-color-dark);
     transition: all .5s;
 }
 
 .my-link:hover{
-    color: var(--my-primary-highlight);
     transform: translateY(-10px);
 }
