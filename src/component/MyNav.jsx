@@ -67,6 +67,7 @@ const MyNav = ({ isMenuOpen, setMenuOpen }) => {
           About Me
         </Nav.Link>
         <Nav.Link
+          href='#projects'
           onClick={() => {
             setMenuOpen(false);
           }}

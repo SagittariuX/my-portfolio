@@ -22,33 +22,36 @@ const ContactForm = () => {
   };
 
   return (
-    <Container fluid id='contact-me' className={styles["my-form-container"]}>
-      <Form className={styles["my-form"]} onSubmit={handleSubmit}>
-        <Row className={styles["my-form-row"]}>
-          <Form.Control
-            type="text"
-            id="name"
-            name="name"
-            placeholder="Your name / Contact info"
-            required
-          />
-        </Row>
-        <Row className={styles["my-form-row"]}>
-          <Form.Control
-            as="textarea"
-            id="message"
-            name="message"
-            rows={5}
-            placeholder="Your message..."
-            required
-          />
-        </Row>
-        <Row className={styles["my-form-row"]}>
-          <Button type="submit">Send</Button>
-          <Button type="reset">Clear</Button>
-        </Row>
-      </Form>
-    </Container>
+    <>
+      <h1 >Connect with Me</h1>
+      <Container fluid id="contact-me" className={styles["my-form-container"]}>
+        <Form className={styles["my-form"]} onSubmit={handleSubmit}>
+          <Row className={styles["my-form-row"]}>
+            <Form.Control
+              type="text"
+              id="name"
+              name="name"
+              placeholder="Your name / Contact info"
+              required
+            />
+          </Row>
+          <Row className={styles["my-form-row"]}>
+            <Form.Control
+              as="textarea"
+              id="message"
+              name="message"
+              rows={5}
+              placeholder="Your message..."
+              required
+            />
+          </Row>
+          <Row className={styles["my-form-row"]}>
+            <Button type="submit">Send</Button>
+            <Button type="reset">Clear</Button>
+          </Row>
+        </Form>
+      </Container>
+    </>
   );
 };
 

@@ -1,7 +1,6 @@
 .my-project-container{
-    padding: 30vh 0px;
+    margin: 30vh 0px;
 }
-
 
 .my-project-wrapper{
     display: flex;
@@ -17,7 +16,6 @@
     transform-style: preserve-3d;
 }
 
-
 @media screen and (max-width: 768px){
 
     .my-project-wrapper{
@@ -28,18 +26,22 @@
 .my-project-img{
     height: 300px;
     border-radius: 20px;
-    filter: grayscale(50%);
     cursor: pointer;
 }
 
 .my-project-img:hover{
     box-shadow: 0 0 10px black;
-    filter: grayscale(0%);
 }
-
+.my-modal{
+    background-color: var(--my-primary-accent) !important;
+}
 
 .my-modal-header{
     border: none !important;
+}
+
+.my-modal-header > button{
+    color: var(--font-text) !important;
 }
 
 .my-modal-container{
@@ -55,6 +57,10 @@
 .my-modal-img{
     width: 100%;
     border-radius: 20px;
+}
+
+.my-modal-footer{
+    border: none !important;
 }
 
 @media screen and (max-width: 1000px){

@@ -16,6 +16,7 @@
 }
 
 .my-typing{
+    text-align: left;
     font-family: var(--font-title);
     font-size: 1em;
 }
@@ -36,14 +37,14 @@
     }
 }
 
-#about-me{
+.about-me{
     display: flex;
     padding-top: 20px;
     align-items: center;
     justify-content: center;
 }
 
-#about-me > div{
+.about-me > div{
     flex: 1;
 }
 
@@ -60,7 +61,7 @@
 }
 
 @media screen and (max-width: 768px){
-    #about-me{
+    .about-me{
         flex-direction: column;
     }
 

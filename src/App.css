@@ -5,7 +5,7 @@
   --my-primary-accent-transparent: #203079cc;
 
   --my-primary-highlight: #00ccff;
-  --my-primary-text-color: #9baaf0;
+  --my-primary-text-color: #bdc6ee;
   --my-primary-title-color: #00ccff;
   --font-title: 'Space Mono', Monaco , monospace;
   --font-text: "Montserrat", sans-serif;
@@ -26,4 +26,8 @@ body {
 #content-wrapper.blur{
   filter: blur(4px);
   pointer-events: none;
+}
+
+h1{
+  text-align: center;
 }

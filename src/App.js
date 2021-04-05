@@ -6,6 +6,7 @@ import MyNav from "./component/MyNav";
 import ContactForm from "./component/ContactForm";
 import AboutMe from "./component/AboutMe";
 import Projects from "./component/Projects";
+import SocialInfo from "./component/SocialInfo";
 
 function App() {
   const [isMenuOpen, setMenuOpen] = useState(false);
@@ -17,6 +18,7 @@ function App() {
         <AboutMe />
         <Projects />
         <ContactForm />
+        <SocialInfo />
       </Container>
     </>
   );

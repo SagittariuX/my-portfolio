@@ -47,7 +47,7 @@ const AboutMe = () => {
           the next 'Big Thing.'
         </p>
       </Container>
-      <Container fluid id={styles["about-me"]}>
+      <Container fluid id='about-me' className={styles["about-me"]}>
         <div className={styles["my-profile-pic-frame"]}>
           <img
             alt="Aaron's profile pic"

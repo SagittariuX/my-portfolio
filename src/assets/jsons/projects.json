@@ -1,6 +1,22 @@
 {
   "items": [
     {
+      "title": "Discord Clone",
+      "description": "discord",
+      "pic": "/projects/discordclone.png",
+      "languages": ["ReactJS", "JavaScript", "React-Bootstrap", "FireBase"],
+      "links": [
+        {
+          "domain": "github",
+          "href": "https://github.com/SagittariuX/Sorting"
+        },
+        {
+          "domain": "external-link",
+          "href": "https://aasorting.netlify.app/"
+        }
+      ]
+    },
+    {
       "title": "Sort Me",
       "description": "A lightweight sorting algorithm visualizer. Allows users to customize options and view how the selected sorting method works.",
       "pic": "/projects/sortme.png",
