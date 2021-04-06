@@ -97,6 +97,11 @@
   border: none !important;
 }
 
+.my-modal-links{
+  padding: 5px;
+  text-decoration: none;
+}
+
 @media screen and (max-width: 1000px) {
   .my-modal-container {
     flex-direction: column;

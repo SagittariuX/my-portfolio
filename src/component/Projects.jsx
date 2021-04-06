@@ -1,10 +1,12 @@
 import React, { useState } from "react";
-import { Container, Col, Row } from "react-bootstrap";
+import { Container, Col, Row, Badge } from "react-bootstrap";
 import Modal from "react-bootstrap/Modal";
 
 import styles from "./css/projects.module.css";
 
 import ProjectJson from "../assets/jsons/projects.json";
+
+import FeatherIcon from "feather-icons-react";
 
 //NOTE: all project images are stored in /public/projects
 const ProjectCard = ({
@@ -51,7 +53,16 @@ const ProjectCard = ({
           </Container>
         </Modal.Body>
         <Modal.Footer className={styles["my-modal-footer"]}>
-          Footer
+          {links.map(({ domain, text, href }) => {
+            return (
+              <Badge pill variant="light">
+                <a href={href} rel='noreferrer' target='_blank' className={styles['my-modal-links']}>
+                  <FeatherIcon icon={domain} />
+                  {text}
+                </a>
+              </Badge>
+            );
+          })}
         </Modal.Footer>
       </Modal>
     </>
