@@ -45,6 +45,7 @@ const MyNav = ({ isMenuOpen, setMenuOpen }) => {
 
       {isSmallScreen && (
         <Button
+          className={styles['my-button']}
           onClick={() => {
             setMenuOpen(!isMenuOpen);
           }}
@@ -59,6 +60,7 @@ const MyNav = ({ isMenuOpen, setMenuOpen }) => {
         }`}
       >
         <Nav.Link
+          className={styles["middle-transition"]}
           href="#about-me"
           onClick={() => {
             setMenuOpen(false);
@@ -67,7 +69,8 @@ const MyNav = ({ isMenuOpen, setMenuOpen }) => {
           About Me
         </Nav.Link>
         <Nav.Link
-          href='#projects'
+          className={styles["middle-transition"]}
+          href="#projects"
           onClick={() => {
             setMenuOpen(false);
           }}
@@ -75,6 +78,7 @@ const MyNav = ({ isMenuOpen, setMenuOpen }) => {
           Projects
         </Nav.Link>
         <Nav.Link
+          className={styles["middle-transition"]}
           href="#contact-me"
           onClick={() => {
             setMenuOpen(false);
@@ -83,10 +87,13 @@ const MyNav = ({ isMenuOpen, setMenuOpen }) => {
           Contact Me
         </Nav.Link>
         <Nav.Link
-          target='_blank'
+          className={styles["middle-transition"]}
+          target="_blank"
           href={process.env.PUBLIC_URL + "/resume/resume.pdf"}
           onClick={() => setMenuOpen(false)}
-        >Résumé</Nav.Link>
+        >
+          View Résumé
+        </Nav.Link>
       </Nav>
     </Navbar>
   );
