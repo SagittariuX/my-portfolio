@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Container } from "react-bootstrap";
 import "./App.css";
+import WOW from "wowjs";
 
 import Intro from "./component/Intro";
 import MyNav from "./component/MyNav";
@@ -16,10 +17,14 @@ function App() {
     const introTime = setTimeout(() => {
       setFinishIntro(true);
     }, 5000);
+
+    const wow = new WOW.WOW({ live: false });
+    wow.init();
+
     return () => {
       clearTimeout(introTime);
     };
-  }, []);
+  }, [finishIntro]);
 
   if (finishIntro)
     return (

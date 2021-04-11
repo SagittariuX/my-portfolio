@@ -35,8 +35,8 @@ const MyNav = ({ isMenuOpen, setMenuOpen }) => {
   return (
     <Navbar
       onBlur={() => setMenuOpen(false)}
-      className={`${styles["my-navbar"]} ${isSticky && styles["sticky"]} ${
-        isHidden && styles["hide"]
+      className={`${styles["my-navbar"]} ${isSticky ? styles["sticky"] : ""} ${
+        isHidden ? styles["hide"] : ""
       }`}
     >
       <Navbar.Brand href="#">
@@ -45,7 +45,7 @@ const MyNav = ({ isMenuOpen, setMenuOpen }) => {
 
       {isSmallScreen && (
         <Button
-          className={styles['my-button']}
+          className={styles["my-button"]}
           onClick={() => {
             setMenuOpen(!isMenuOpen);
           }}
@@ -56,11 +56,11 @@ const MyNav = ({ isMenuOpen, setMenuOpen }) => {
 
       <Nav
         className={`${styles["my-nav-links"]} ${
-          isMenuOpen && styles["toggle"]
+          isMenuOpen ? styles["toggle"] : ''
         }`}
       >
         <Nav.Link
-          className={styles["middle-transition"]}
+          className={`${styles["middle-transition"]} wow fadeInDown`}
           href="#about-me"
           onClick={() => {
             setMenuOpen(false);
@@ -69,7 +69,7 @@ const MyNav = ({ isMenuOpen, setMenuOpen }) => {
           About Me
         </Nav.Link>
         <Nav.Link
-          className={styles["middle-transition"]}
+          className={`${styles["middle-transition"]} wow fadeInDown `}
           href="#projects"
           onClick={() => {
             setMenuOpen(false);
@@ -78,7 +78,7 @@ const MyNav = ({ isMenuOpen, setMenuOpen }) => {
           Projects
         </Nav.Link>
         <Nav.Link
-          className={styles["middle-transition"]}
+          className={`${styles["middle-transition"]} wow fadeInDown `}
           href="#contact-me"
           onClick={() => {
             setMenuOpen(false);
@@ -87,7 +87,7 @@ const MyNav = ({ isMenuOpen, setMenuOpen }) => {
           Contact Me
         </Nav.Link>
         <Nav.Link
-          className={styles["middle-transition"]}
+          className={`${styles["middle-transition"]} wow fadeInDown `}
           target="_blank"
           href={process.env.PUBLIC_URL + "/resume/resume.pdf"}
           onClick={() => setMenuOpen(false)}

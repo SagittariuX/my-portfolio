@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { Container } from 'react-bootstrap';
 
 import styles from './css/intro.module.css';
@@ -6,12 +6,6 @@ import IntroSVG from '../assets/pics/Computer.svg';
 
 
 const Intro = () => {
-
-    useEffect (() => {
-        console.log('mount');
-
-        return () => { console.log('unmount') }
-    },[])
 
     return ( 
         <Container fluid className={styles['intro-container']}>

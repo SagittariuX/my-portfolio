@@ -53,9 +53,9 @@ const ProjectCard = ({
           </Container>
         </Modal.Body>
         <Modal.Footer className={styles["my-modal-footer"]}>
-          {links.map(({ domain, text, href }) => {
+          {links.map(({ domain, text, href } , i) => {
             return (
-              <Badge pill variant="light">
+              <Badge key={i} pill variant="light">
                 <a href={href} rel='noreferrer' target='_blank' className={styles['my-modal-links']}>
                   <FeatherIcon icon={domain} />
                   {text}
@@ -82,18 +82,18 @@ const Projects = () => {
           <h1>Some Of My Projects</h1>
           <Row className={styles["my-project-wrapper"]}>
             <Col className={styles["my-project-innerwrapper"]}>
-              <ProjectCard json={project0} />
+              <ProjectCard key='0' json={project0} />
             </Col>
             <Col className={styles["my-project-innerwrapper"]}>
-              <ProjectCard json={project1} />
+              <ProjectCard key='1' json={project1} />
             </Col>
           </Row>
           <Row className={styles["my-project-wrapper"]}>
             <Col className={styles["my-project-innerwrapper"]}>
-              <ProjectCard json={project2} />
+              <ProjectCard key='2' json={project2} />
             </Col>
             <Col className={styles["my-project-innerwrapper"]}>
-              <ProjectCard json={project3} />
+              <ProjectCard key='3' json={project3} />
             </Col>
           </Row>
         </Container>

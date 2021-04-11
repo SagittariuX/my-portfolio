@@ -1,12 +1,12 @@
 .my-navbar {
+  position: fixed !important;
+  width: 100%;
+  top: 0;
   z-index: 99;
   transition: all 0.5s;
   justify-content: space-around !important;
   font-family: var(--font-title);
   font-size: 14px;
-  position: fixed !important;
-  width: 100%;
-  top: 0;
 }
 
 .my-navbar.sticky {
@@ -20,7 +20,14 @@
 
 .my-nav-links > a {
   color: var(--my-primary-text-color) !important;
+  transform: translate
 }
+
+.my-nav-links > a:nth-child(1) {animation-delay: .5s;}
+.my-nav-links > a:nth-child(2) {animation-delay: 1s;}
+.my-nav-links > a:nth-child(3) {animation-delay: 1.5s;}
+.my-nav-links > a:nth-child(4) {animation-delay: 2s;}
+
 
 .my-nav-links > a:hover {
   color: var(--my-primary-highlight) !important;
@@ -69,12 +76,12 @@
   transition: all 0.3s;
 }
 
-a.middle-transition:hover::before {
+.middle-transition:hover::before {
   visibility: visible;
   transform: scaleX(1);
 }
 
 .my-button{
-    background-color: unset;
-    border: none;
+    background-color: unset !important;
+    border: none !important;
 }
