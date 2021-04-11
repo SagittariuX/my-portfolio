@@ -39,7 +39,7 @@ const AboutMe = () => {
   return (
     <>
       <Container fluid id={styles["my-main-header-bg"]}>
-        <Container id={styles["my-main-header"]}>
+        <Container className={`${styles["my-main-header"]} wow fadeIn`} >
           <h1 className={styles["my-typing"]}>Hello I'm Aaron</h1>
           <MyTypingEffect words={wordList} />
           <p>
@@ -50,14 +50,14 @@ const AboutMe = () => {
       </Container>
       <Container fluid id={styles["about-me-bg"]}>
         <Container id="about-me" className={styles["about-me"]}>
-          <div className={styles["my-profile-pic-frame"]}>
+          <div className={`${styles["my-profile-pic-frame"]} wow fadeInUp`}>
             <img
               alt="Aaron's profile pic"
               src={profilePic}
               className={styles["my-profile-pic"]}
             />
           </div>
-          <div>
+          <div className='wow fadeInUp'>
             <p>Hello! Welcome to my little corner of the internet.</p>
             <p>
               I have a deep passion toward learning about technology, creating
@@ -72,7 +72,7 @@ const AboutMe = () => {
             </p>
           </div>
         </Container>
-        <Container className={styles["languages-tools-bar"]}>
+        <Container className={`${styles["languages-tools-bar"]} wow fadeInUp`}>
           <DevIcon
             icon="react"
             className={styles["dev-icons"]}

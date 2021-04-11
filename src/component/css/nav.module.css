@@ -18,20 +18,24 @@
   transform: translateY(-100%);
 }
 
+.my-icon{
+  animation-delay: .3s;
+}
+
 .my-nav-links > a {
   color: var(--my-primary-text-color) !important;
   transform: translate
 }
 
-.my-nav-links > a:nth-child(1) {animation-delay: .5s;}
-.my-nav-links > a:nth-child(2) {animation-delay: 1s;}
-.my-nav-links > a:nth-child(3) {animation-delay: 1.5s;}
-.my-nav-links > a:nth-child(4) {animation-delay: 2s;}
-
-
 .my-nav-links > a:hover {
   color: var(--my-primary-highlight) !important;
 }
+
+.my-nav-links > a:nth-child(1) {animation-delay: .6s;}
+.my-nav-links > a:nth-child(2) {animation-delay: .9s;}
+.my-nav-links > a:nth-child(3) {animation-delay: 1.2s;}
+.my-nav-links > a:nth-child(4) {animation-delay: 1.5s;}
+
 
 @media screen and (max-width: 768px) {
   .my-nav-links {
@@ -84,4 +88,5 @@
 .my-button{
     background-color: unset !important;
     border: none !important;
+    animation-delay: .6s;
 }

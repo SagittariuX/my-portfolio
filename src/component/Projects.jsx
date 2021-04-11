@@ -17,7 +17,7 @@ const ProjectCard = ({
   return (
     <>
       <div
-        className={styles["my-project-img-wrapper"]}
+        className={`${styles["my-project-img-wrapper"]} wow fadeInUp`}
         onClick={() => setModal(true)}
       >
         <div className={styles["my-project-img-overlay"]}>
@@ -79,7 +79,7 @@ const Projects = () => {
     <>
       <Container fluid id={styles["my-project-bg"]}>
         <Container id="projects" className={styles["my-project-container"]}>
-          <h1>Some Of My Projects</h1>
+          <h1 className='wow fadeInUp'>Some Of My Projects</h1>
           <Row className={styles["my-project-wrapper"]}>
             <Col className={styles["my-project-innerwrapper"]}>
               <ProjectCard key='0' json={project0} />

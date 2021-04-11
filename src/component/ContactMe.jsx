@@ -26,8 +26,8 @@ const ContactMe = () => {
   return (
     <>
       <Container fluid id={styles['contact-me-bg']}>
-        <h1 style={{color: 'var(--my-primary-text-color-dark)'}}>Connect with Me</h1>
-        <Container id="contact-me" className={styles["my-form-container"]}>
+        <h1 className='wow fadeInUp' style={{color: 'var(--my-primary-text-color-dark)'}}>Connect with Me</h1>
+        <Container id="contact-me" className={`${styles["my-form-container"]} wow fadeInUp`}>
           <Form className={styles["my-form"]} onSubmit={handleSubmit}>
             <Row className={styles["my-form-row"]}>
               <Form.Control

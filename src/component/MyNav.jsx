@@ -39,13 +39,13 @@ const MyNav = ({ isMenuOpen, setMenuOpen }) => {
         isHidden ? styles["hide"] : ""
       }`}
     >
-      <Navbar.Brand href="#">
+      <Navbar.Brand href="#" className={`${styles['my-icon']} wow fadeInDown`}>
         <img src={myLogo} width="50" height="50" alt="myLogo" />
       </Navbar.Brand>
 
       {isSmallScreen && (
         <Button
-          className={styles["my-button"]}
+          className={`${styles["my-button"]} wow fadeInDown`}
           onClick={() => {
             setMenuOpen(!isMenuOpen);
           }}
