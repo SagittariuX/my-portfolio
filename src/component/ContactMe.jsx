@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 
 import { Container, Form, Button, Row } from "react-bootstrap";
 import SocialInfo from "./SocialInfo";
@@ -12,16 +12,29 @@ const serviceId = process.env.REACT_APP_EMAIL_SERVICE_ID;
 const templateId = process.env.REACT_APP_EMAIL_TEMPLATE_ID;
 
 const ContactMe = () => {
+
+  const [sent, setSent] = useState(false)
+
   const handleSubmit = (e) => {
     e.preventDefault();
     emailjs
       .sendForm(serviceId, templateId, e.target, userId)
       .then((res) => {
         e.target.reset();
-        console.log(`email sent: ${res.text}`);
+        setSent(true);
       })
-      .catch((err) => console.log(err.text));
+      .catch((err) => console.error(err.text));
   };
+
+  if (sent)
+    return (
+      <Container fluid id={styles['contact-me-bg']}>
+        <h1 style={{color: 'var(--my-primary-text-color-dark)'}}>Thank you for visiting!</h1>
+        <h1 style={{color: 'var(--my-primary-text-color-dark)'}}>I'll try to respond to your message ASAP!</h1>
+        <SocialInfo />
+      </Container>
+    );
+
 
   return (
     <>

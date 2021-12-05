@@ -57,8 +57,8 @@ const ProjectCard = ({
             return (
               <Badge key={i} pill variant="light">
                 <a href={href} rel='noreferrer' target='_blank' className={styles['my-modal-links']}>
-                  <FeatherIcon icon={domain} />
-                  {text}
+                  <FeatherIcon icon={domain} />{' '}
+                  {text.toUpperCase()}
                 </a>
               </Badge>
             );
@@ -70,6 +70,10 @@ const ProjectCard = ({
 };
 
 const Projects = () => {
+
+  //Looks weird but I only want to show top 4
+  //NOTE: will add a scrollable list of projects once I have more thing built
+  //      will be a seperate page.
   const project0 = ProjectJson.items[0];
   const project1 = ProjectJson.items[1];
   const project2 = ProjectJson.items[2];
