@@ -4,7 +4,7 @@ import AboutMe from "./AboutMe";
 import Projects from "./Projects";
 import ContactMe from "./ContactMe";
 
-const Home = () => {
+const Home = ({isMenuOpen}) => {
   return (
     <Container
       fluid

@@ -4,7 +4,7 @@ import ReactTypingEffect from "react-typing-effect";
 
 import styles from "./css/aboutme.module.css";
 
-import profilePic from "../assets/pics/profile.jpg";
+import profilePic from "../../assets/pics/profile.jpg";
 
 import DevIcon from "devicon-react-svg";
 
@@ -34,7 +34,7 @@ const MyTypingEffect = ({ words }) => {
 };
 
 const AboutMe = () => {
-  const wordList = ["build tools.", "create solutions.", "love to learn."];
+  const wordList = ["build tools!", "create solutions!", "love to learn!"];
 
   return (
     <>

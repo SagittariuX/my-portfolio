@@ -1,11 +1,9 @@
 import React, { useState, useEffect } from "react";
-import { Container } from "react-bootstrap";
 import "./App.css";
 import WOW from "wowjs";
-import { Routes, Route } from "react-router-dom";
-
-import Intro from "./component/Intro";
 import MyNav from "./component/MyNav";
+import Intro from "./component/Intro";
+import Home from "./component/mainpage/Home";
 
 function App() {
   const [isMenuOpen, setMenuOpen] = useState(false);
@@ -28,7 +26,7 @@ function App() {
     return (
       <>
         <MyNav setMenuOpen={setMenuOpen} isMenuOpen={isMenuOpen} />
-        
+        <Home isMenuOpen={isMenuOpen}/>
       </>
     );
 

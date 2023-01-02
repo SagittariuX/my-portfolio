@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "./css/socialinfo.module.css";
 
-import socialjson from "../assets/jsons/socialinfo.json";
+import socialjson from "../../assets/jsons/socialinfo.json";
 import FeatherIcon from "feather-icons-react";
 
 const SocialInfo = () => {
