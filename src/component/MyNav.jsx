@@ -1,3 +1,4 @@
+import "bootstrap/dist/css/bootstrap.min.css";
 import styles from "./css/nav.module.css";
 import React, { useEffect, useState, useRef } from "react";
 import { Container, Nav, Navbar, Offcanvas } from "react-bootstrap";
@@ -40,7 +41,8 @@ const MyNav = ({ isMenuOpen, setMenuOpen }) => {
         <Navbar.Toggle aria-controls="offcanvasNavbar"></Navbar.Toggle>
         <Navbar.Offcanvas
           placement="end"
-          className={`${styles["my-offcanvas"]}`} //overwrite bootstrap default canvas values
+          style={{flexGrow: 0}} //manually overwrite bs styles
+          className={`${styles["my-offcanvas"]}`}
         >
           <Offcanvas.Header closeButton>
             <Offcanvas.Title>Menu</Offcanvas.Title>

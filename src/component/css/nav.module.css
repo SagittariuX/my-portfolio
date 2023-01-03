@@ -13,9 +13,12 @@
   transform: translateY(-100%);
 }
 
-.my-offcanvas {
-  flex-grow: 0;
-  background-color: #ffffff00;
+@media screen and (max-width: 992px) {
+  .my-offcanvas {
+    flex-grow: unset;
+    background-color: #ffffff00;
+    backdrop-filter: blur(15px); 
+  }
 }
 
 .my-icon{
