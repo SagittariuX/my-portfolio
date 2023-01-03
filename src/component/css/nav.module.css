@@ -1,6 +1,5 @@
 .my-navbar {
   transition: all 0.5s;
-  justify-content: space-around ;
   font-family: var(--font-title);
   font-size: 14px;
 }
@@ -12,6 +11,11 @@
 
 .my-navbar.sticky.hide {
   transform: translateY(-100%);
+}
+
+.my-offcanvas {
+  flex-grow: 0;
+  background-color: #ffffff00;
 }
 
 .my-icon{
@@ -32,11 +36,11 @@
 .my-nav-links > a:nth-child(3) {animation-delay: 1.2s;}
 .my-nav-links > a:nth-child(4) {animation-delay: 1.5s;}
 
-.middle-transition {
+.underline-transition {
   position: relative;
 }
 
-.middle-transition::before {
+.underline-transition::before {
   content: "";
   position: absolute;
   width: 100%;
@@ -46,10 +50,11 @@
   background-color: var(--my-primary-highlight);
   visibility: hidden;
   transform: scaleX(0);
+  transform-origin: top left;
   transition: all 0.3s;
 }
 
-.middle-transition:hover::before {
+.underline-transition:hover::before {
   visibility: visible;
   transform: scaleX(1);
 }

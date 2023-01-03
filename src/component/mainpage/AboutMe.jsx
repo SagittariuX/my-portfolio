@@ -1,11 +1,8 @@
 import React from "react";
 import { Container } from "react-bootstrap";
 import ReactTypingEffect from "react-typing-effect";
-
 import styles from "./css/aboutme.module.css";
-
 import profilePic from "../../assets/pics/profile.jpg";
-
 import DevIcon from "devicon-react-svg";
 
 const MyTypingEffect = ({ words }) => {
@@ -44,7 +41,7 @@ const AboutMe = () => {
           <MyTypingEffect words={wordList} />
           <p>
             I'm a software developer eager to demonstrate my talent and help
-            build the next 'Big Thing.'
+            build the next 'Big Thing!'
           </p>
         </Container>
       </Container>

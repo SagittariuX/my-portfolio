@@ -1,6 +1,6 @@
+import styles from "./css/nav.module.css";
 import React, { useEffect, useState, useRef } from "react";
 import { Container, Nav, Navbar, Offcanvas } from "react-bootstrap";
-import styles from "./css/nav.module.css";
 import myLogo from "../assets/pics/logo.png";
 
 const MyNav = ({ isMenuOpen, setMenuOpen }) => {
@@ -38,18 +38,21 @@ const MyNav = ({ isMenuOpen, setMenuOpen }) => {
           <img src={myLogo} width="50" height="50" alt="myLogo" />
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="offcanvasNavbar"></Navbar.Toggle>
-        <Navbar.Offcanvas placement="end">
+        <Navbar.Offcanvas
+          placement="end"
+          className={`${styles["my-offcanvas"]}`} //overwrite bootstrap default canvas values
+        >
           <Offcanvas.Header closeButton>
             <Offcanvas.Title>Menu</Offcanvas.Title>
           </Offcanvas.Header>
-          <Offcanvas.Body>
+          <Offcanvas.Body >
             <Nav
               className={`${styles["my-nav-links"]} ${
                 isMenuOpen ? styles["toggle"] : ""
               }`}
             >
               <Nav.Link
-                className={`${styles["middle-transition"]} wow fadeInDown`}
+                className={`${styles["underline-transition"]} wow fadeInDown`}
                 href="#about-me"
                 onClick={() => {
                   setMenuOpen(false);
@@ -58,7 +61,7 @@ const MyNav = ({ isMenuOpen, setMenuOpen }) => {
                 About Me
               </Nav.Link>
               <Nav.Link
-                className={`${styles["middle-transition"]} wow fadeInDown`}
+                className={`${styles["underline-transition"]} wow fadeInDown`}
                 href="#projects"
                 onClick={() => {
                   setMenuOpen(false);
@@ -67,7 +70,7 @@ const MyNav = ({ isMenuOpen, setMenuOpen }) => {
                 Projects
               </Nav.Link>
               <Nav.Link
-                className={`${styles["middle-transition"]} wow fadeInDown`}
+                className={`${styles["underline-transition"]} wow fadeInDown`}
                 href="#contact-me"
                 onClick={() => {
                   setMenuOpen(false);
@@ -76,7 +79,7 @@ const MyNav = ({ isMenuOpen, setMenuOpen }) => {
                 Contact Me
               </Nav.Link>
               <Nav.Link
-                className={`${styles["middle-transition"]} wow fadeInDown`}
+                className={`${styles["underline-transition"]} wow fadeInDown`}
                 target="_blank"
                 href={process.env.PUBLIC_URL + "/resume/resume.pdf"}
                 onClick={() => setMenuOpen(false)}
