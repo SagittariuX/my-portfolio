@@ -4,7 +4,7 @@ import Modal from "react-bootstrap/Modal";
 
 import styles from "./css/projects.module.css";
 
-import ProjectJson from "../assets/jsons/projects.json";
+import ProjectJson from "../../assets/jsons/projects.json";
 
 import FeatherIcon from "feather-icons-react";
 

@@ -1,10 +1,5 @@
 .my-navbar {
-  position: fixed !important;
-  width: 100%;
-  top: 0;
-  z-index: 99;
   transition: all 0.5s;
-  justify-content: space-around !important;
   font-family: var(--font-title);
   font-size: 14px;
 }
@@ -16,6 +11,14 @@
 
 .my-navbar.sticky.hide {
   transform: translateY(-100%);
+}
+
+@media screen and (max-width: 992px) {
+  .my-offcanvas {
+    flex-grow: unset;
+    background-color: #ffffff00;
+    backdrop-filter: blur(15px); 
+  }
 }
 
 .my-icon{
@@ -36,38 +39,11 @@
 .my-nav-links > a:nth-child(3) {animation-delay: 1.2s;}
 .my-nav-links > a:nth-child(4) {animation-delay: 1.5s;}
 
-
-@media screen and (max-width: 768px) {
-  .my-nav-links {
-    position: absolute;
-    top: 100%;
-    left: 100%;
-    width: 50%;
-    height: 100vh;
-    background-color: inherit;
-    text-align: center;
-    z-index: 98;
-    visibility: hidden;
-    flex-direction: column !important;
-    /* box-shadow: -5px 0px 5px #00000080; */
-    transition-property: transform, visibility;
-    transition-duration: 0.5s;
-  }
-  .my-nav-links.toggle {
-    visibility: visible;
-    transform: translateX(-100%);
-  }
-
-  .my-navbar {
-    justify-content: space-between !important;
-  }
-}
-
-.middle-transition {
+.underline-transition {
   position: relative;
 }
 
-.middle-transition::before {
+.underline-transition::before {
   content: "";
   position: absolute;
   width: 100%;
@@ -77,10 +53,11 @@
   background-color: var(--my-primary-highlight);
   visibility: hidden;
   transform: scaleX(0);
+  transform-origin: top left;
   transition: all 0.3s;
 }
 
-.middle-transition:hover::before {
+.underline-transition:hover::before {
   visibility: visible;
   transform: scaleX(1);
 }
