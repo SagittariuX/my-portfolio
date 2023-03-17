@@ -55,7 +55,7 @@ const AboutMe = () => {
             />
           </div>
           <div className='wow fadeInUp'>
-            <p>Hello! Welcome to my little corner of the internet.</p>
+            <p>Hello, Welcome to my little corner of the internet!</p>
             <p>
               I have a deep passion toward learning about technology, creating
               my own innovations and solving real-world problems. My main goal
